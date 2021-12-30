@@ -91,7 +91,7 @@ async function init() {
 
       const currentRacing = textRacing[1].split("/")[0];
 
-      if (currentRacing < 12) {
+      if (currentRacing < 13) {
         // Transforma a quantidade restante de corridas em array
         const racesLeft = Array.from(Array(12 - currentRacing).keys());
 
@@ -102,7 +102,8 @@ async function init() {
           await previousPromiseRace;
 
           //Clica no botão Start Race
-          document.getElementsByClassName("btn-green")[0].click();
+          // document.getElementsByClassName("btn-green")[0].click(); PODE BUGAR E CLICAR NO BOTÃO DROPDOWN "Withdrawal"
+          content[0].children[0].children[0].children[6].children[0].click();
 
           /**
            * Aguarda o tempo de execução da corrida e clica no botão para obter a recompensa
