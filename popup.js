@@ -164,17 +164,3 @@ async function init() {
 }
 
 document.getElementById("icon").addEventListener("click", start);
-
-async function copyClipboard() {
-  var copyFrom = document.createElement("textarea");
-  copyFrom.textContent = "codigo da carteira para doações";
-  document.body.appendChild(copyFrom);
-  copyFrom.select();
-  document.execCommand("copy");
-  copyFrom.blur();
-  document.body.removeChild(copyFrom);
-}
-
-document
-  .getElementById("address-button")
-  .addEventListener("click", copyClipboard);
