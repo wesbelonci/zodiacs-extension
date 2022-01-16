@@ -65,7 +65,7 @@ async function start() {
 async function init() {
   const url = window.location.href.split("/");
 
-  if (url[2] === "app.zodiacs.me") {
+  if (url[2] === "v2.zodiacs.me") {
     const content = document.getElementsByClassName("ant-card-body");
 
     const carslenght =
@@ -91,9 +91,11 @@ async function init() {
 
       const currentRacing = textRacing[1].split("/")[0];
 
-      if (currentRacing < 13) {
+      console.log(currentRacing);
+
+      if (currentRacing < 10) {
         // Transforma a quantidade restante de corridas em array
-        const racesLeft = Array.from(Array(12 - currentRacing).keys());
+        const racesLeft = Array.from(Array(10 - currentRacing).keys());
 
         /**
          * Executa um lop de acordo com a quantidade de corridas existente para o carro selecionado
@@ -103,7 +105,7 @@ async function init() {
 
           //Clica no botão Start Race
           // document.getElementsByClassName("btn-green")[0].click(); PODE BUGAR E CLICAR NO BOTÃO DROPDOWN "Withdrawal"
-          content[0].children[0].children[0].children[6].children[0].click();
+          content[0].children[0].children[0].children[7].children[0].click();
 
           /**
            * Aguarda o tempo de execução da corrida e clica no botão para obter a recompensa
@@ -132,7 +134,7 @@ async function init() {
                       receiverClaim[0].click();
                       clearInterval(receiverClaimTimer);
 
-                      if (indexRace < 12) {
+                      if (indexRace < 10) {
                         /**
                          * Aguarda para fechar o modal de recompensa e seleciona novamente o mesmo carro
                          */
